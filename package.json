@@ -1,0 +1,13 @@
+{
+  "name": "fmd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "args": "^3.0.8",
+    "dotenv": "^5.0.1",
+    "google-drive-blobs": "^4.0.0",
+    "request": "^2.85.0",
+    "sanitize-filename": "^1.6.1"
+  }
+}
