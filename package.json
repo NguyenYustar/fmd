@@ -7,6 +7,7 @@
     "args": "^3.0.8",
     "dotenv": "^5.0.1",
     "google-drive-blobs": "^4.0.0",
+    "mkdirp": "^0.5.1",
     "request": "^2.85.0",
     "sanitize-filename": "^1.6.1"
   }

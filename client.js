@@ -153,7 +153,7 @@ class Client {
       );
     const path = p.resolve(__dirname, 'download', this.courseData.slug);
     if (!fs.existsSync(path)) fs.mkdirSync(path);
-    return read.pipe(gstore.createWriteStream(p.resolve(path, filename)));
+    return read.pipe(fs.createWriteStream(p.resolve(path, filename)));
   }
 }
 
