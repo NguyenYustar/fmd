@@ -2,6 +2,7 @@ require('dotenv').config({ silent: true });
 const util = require('util');
 const fs = require('fs');
 const p = require('path');
+const mkdirp = require('mkdirp')
 const request = require('request');
 const sanitize = require('sanitize-filename');
 const gdb = require('google-drive-blobs');
@@ -152,7 +153,7 @@ class Client {
         )
       );
     const path = p.resolve(__dirname, 'download', this.courseData.slug);
-    if (!fs.existsSync(path)) fs.mkdirSync(path);
+    if (!fs.existsSync(path)) mkdirp.sync(path);
     return read.pipe(fs.createWriteStream(p.resolve(path, filename)));
   }
 }
